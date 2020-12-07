@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="final School project, ReDI School">
+    <meta name="author" content="Roxana Matei">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+            <img src="./images/ReDI School logo.png" alt="logo", width="80">
+          <h1><span class="highlight">ReDI School </span> </h1>
+      </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <title> BMI Calculator | Welcome </title>
+      <link rel="stylesheet" href="./css/style.css">
+</header>
+    <section id="showcase">
+      <div class="container">
+      </div>
+    </section>
+
+<form name="bmicalculation">
+    Enter your Weight (kg): <input type="text" name="weight" size="10"><br>
+    Enter your Height (cm): <input type="text" name="height" size="10"><br>
+    <br>
+    <input type="button" value="Calculate my BMI" onClick="bmiCalculator()">
+    <br />
+    <br>
+    Your BMI result is: <input type="text" name="bmi" size="20"><br>
+    Result interpretation: <input type="text" name="meaning" size="65"><br>
+    <input type="reset" value="Reset" />
+</form>
+<script>
+          function bmiCalculator() {
+          var weight = document.bmicalculation.weight.value;
+          var height = document.bmicalculation.height.value;
+          if(weight > 0 && height > 0){
+          var finalBmi = Math.round(weight/(height/100*height/100));
+          document.bmicalculation.bmi.value = finalBmi;
+          if(finalBmi < 18.5){
+          document.bmicalculation.meaning.value = " you are underweight, please see a nutritionist and/or your doctor.";
+          }
+          if(finalBmi > 18.5 && finalBmi < 25){
+          document.bmicalculation.meaning.value = " you are healthy, keep it going this way";
+          }
+          if(finalBmi > 25){
+          document.bmicalculation.meaning.value = " you are overweighted, please see a nutritionist and/or your doctor.";
+          }
+          }
+          else{
+          alert("Please fill in your Weight in kilograms and Height in centimeters");
+          }
+          }
+</script>
+
+
+    <section id="newsletter">
+      <div class="container">
+        <h1> Subscribe to my Newsletter </h1>
+          <form>
+            <input type="email" placeholder="Enter Email">
+            <button type="submit" class="button_1"> Subscribe </button>
+          </form>
+      </div>
+    </section>
+
+    <footer>
+      <p> Roxana Matei Copyright; 2020 </p>
+    </footer>
+
+
+</body>
+</html>

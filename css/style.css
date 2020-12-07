@@ -1,0 +1,169 @@
+/* General page font*/
+body {
+
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+padding: 0;
+margin:0;
+background-color: #f4f4f4; /*Page background color*/
+}
+/* Global */
+.container {      /*the container is a class (that is why i used a dot before)*/
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {         /*representing all the ul's on the page, to default 0 margin and padding*/
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {     /* button config global so I can use that in other places as well */
+  height: 38px;
+  background: #e8491d;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.dark {
+  padding: 15px;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Header */
+header {
+  background: #35434a;           /*dark grey color*/
+  color:#ffffff;                  /*white letters*/
+  padding-top: 30px;
+  min-height: 70px;               /*minimum height in order for it to automatically adjust*/
+  border-bottom: #e8491d 3px solid;     /*header bottom border color and thickness*/
+}
+
+header a {              /*Header links*/
+  color: #ffffff;       /*white letters*/
+  text-decoration: none;              /*removes underline*/
+  text-transform: uppercase;          /*make capital letter*/
+  font-size: 16px;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding {     /*div id branding (ReDI School name in header)*/
+  float:left;
+
+}
+
+header #branding h1 {
+  margin: 0;
+  float: right;
+  text-align: left;
+  width: 60%;
+  padding: 1px;
+  margin-bottom: 5px;
+}
+
+header nav {          /*navigating buttons(Home, About, Contact)*/
+  float: right;
+  margin-top: 10px;
+}
+/* putting the class on li (in index.html)   */
+header .highlight, header .current a {      /*highlight with a different color when to the corresponding page you are*/
+color: #26E5FB;
+}
+
+header a:hover { /*for color to change on the corresponding button where you are  */
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/* Showcase */
+
+#showcase {
+       /* this is an id */
+  min-height: 500px;
+  background: url('../Images/BMI_photo.jpg') no-repeat 0 -450px;
+  background-size: cover;
+}
+
+#showcase h1 {
+  margin-top: 20px;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+#showcase p {
+  font-size: 20px;
+  text-align: center;
+  color: inherit;
+
+}
+/* Newsletter*/
+#newsletter {
+  padding: 15px;
+  color: #ffffff;
+  background: #35424a;
+  border-top: #e8491d 3px solid;
+}
+
+#newsletter h1 {  /* place newsletter text to the left side */
+  float:left;
+}
+
+#newsletter form {
+  float:right;          /* move box to the right side of the panel */
+  margin-top: 15px;     /* move box lower */
+}
+
+#newsletter input[type="email"] {   /* asking for specific input with type email */
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+form {
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  margin-top: 5px;
+  ;
+}
+
+input[type=text] {
+  border-radius: 5px;
+    background: #EAEAEA;
+
+}
+
+}
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
